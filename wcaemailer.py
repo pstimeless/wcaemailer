@@ -38,14 +38,12 @@ def emailer():
     print("sent")
     server.quit()
 
-
 # URL = 'https://www.worldcubeassociation.org/competitions?utf8=%E2%9C%93&region=all&search=Toronto&state=present&year=all+years&from_date=&to_date=&delegate=&display=list'
 # URL = 'https://www.worldcubeassociation.org/competitions?utf8=%E2%9C%93&region=_North+America&search=&state=present&year=all+years&from_date=&to_date=&delegate=&display=list'
 # head ={"	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"}
 
 # parses data from wca
 parsed = []
-# def check_WCA():
 location = (my_config_parser['DEFAULT']['location'])
 url = f'http://www.worldcubeassociation.org/competitions?utf8=%%E2%%9C%%93&region=all&search={location}&state=present&year=all+years&from_date=&to_date=&delegate=&display=list'
 page = requests.get(url)
@@ -63,7 +61,6 @@ zz = [suburl + link.get('href') for link in alllinks if ("/competitions/mine" no
 for line in ok:
     parsed.append(str(line))
 
-# parsed = str(parsed)
 # print (len(parsed))
 print(ok)
 
