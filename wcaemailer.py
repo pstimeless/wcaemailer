@@ -27,8 +27,8 @@ def emailer():
     my_password = ""
 
     zto_email = my_config_parser['DEFAULT']['to_email']
-    # email = "beatdro6@gmail.com"
-    # password = 'jeskajzbqhazztho'
+    # email = "xxx"
+    # password = 'xxx'
     server.login(my_email, my_password)
     to_email = [zto_email, "mrjanrar@yahoo.com"]
     subject = f"~WCA Competitions Announced in {location}~"
